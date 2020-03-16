@@ -1,0 +1,96 @@
+<%- include('header') %>
+<div class="container">
+  <h1>Add Team</h1>
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addTeam">
+    <i class="fas fa-user-plus"></i> Add
+  </button>
+  <div class="modal fade" id="addTeam" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add Team</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="" method="post">
+            <div class="form-group">
+              <label class="control-label">Username</label>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="far fa-user"></i></span>
+                  </div>
+                  <input type="text" class="form-control" name="username" autocomplete="off" />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Password</label>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                  </div>
+                  <input type="text" class="form-control" name="password" autocomplete="off" />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Team Name</label>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-users"></i></span>
+                  </div>
+                  <input type="text" class="form-control" name="teamName" autocomplete="off" />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="isAdmin">Admin Role</label>
+              <select class="form-control" id="isAdmin" name="isAdmin">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-lg btn-block btn-success"><i class="fas fa-user-plus"></i> Add</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="users-table">
+    <h1>Teams List</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Username</th>
+          <th scope="col">Password</th>
+          <th scope="col">Team Name</th>
+          <th scope="col">Token</th>
+          <th scope="col">Is Admin</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% view.users.forEach((user) => { %>
+        <tr>
+          <td><%=user.username%></td>
+          <td><%=user.password%></td>
+          <td><%=user.teamName%></td>
+          <td class="token"><%=user.token%></td>
+          <td><%=user.isAdmin%></td>
+          <td><a href="/admin/users/delete/<%=user._id%>" class="btn btn-danger"><i class="far fa-trash-alt"></i></a>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>
+<%- include('footer') %>

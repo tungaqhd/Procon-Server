@@ -1,0 +1,31 @@
+{
+  "name": "procon-server",
+  "version": "1.0.0",
+  "description": "procon server",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app",
+    "init": "node init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tungaqhd/Procon-Server.git"
+  },
+  "author": "tungaqhd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tungaqhd/Procon-Server/issues"
+  },
+  "homepage": "https://github.com/tungaqhd/Procon-Server#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "i": "^0.3.6",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.3",
+    "npm": "^6.13.7"
+  }
+}

@@ -1,0 +1,5 @@
+.token {
+    font-size: 10px;
+    max-width: 200px;
+    overflow-wrap: break-word;
+}
