@@ -19,10 +19,10 @@
   },
   "homepage": "https://github.com/tungaqhd/Procon-Server#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "cookie-parser": "^1.4.4",
     "ejs": "^3.0.1",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "i": "^0.3.6",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.3",
